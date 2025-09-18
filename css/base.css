@@ -101,7 +101,7 @@ img:not([src]), img::before {
 	
 .worklist{
 	list-style-type: none;
-	width: 20vw;
+	width: 30vw;
 	text-align: center;
 	margin: auto;
 	}
