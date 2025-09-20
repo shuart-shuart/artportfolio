@@ -98,6 +98,7 @@ img:not([src]), img::before {
 	margin: auto;
 	font-size: max(1.2vh, 8pt);
 	text-align: center;
+	padding-top: 5px;
 	}
 
 /*worklist stuff*/
@@ -167,7 +168,7 @@ a:hover {
 footer {
 	position: fixed;
 	width: 100vw;
-	height: 8vh;
+	height: 12vh;
 	padding: 0.5vh;
 	bottom: 0;
 	right: 0;
