@@ -94,6 +94,8 @@ img:not([src]), img::before {
 	}
 
 .caption {
+	display: block;
+	margin: auto;
 	font-size: max(1.2vh, 8pt);
 	text-align: center;
 	}
