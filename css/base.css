@@ -94,6 +94,7 @@ img:not([src]), img::before {
 	}
 
 .caption {
+	font-size: max(1.2vh, 8pt);
 	text-align: center;
 	}
 
