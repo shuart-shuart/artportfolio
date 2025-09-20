@@ -93,6 +93,10 @@ img:not([src]), img::before {
 	width: 100%;
 	}
 
+.caption {
+	text-align: center;
+	}
+
 /*worklist stuff*/
 .thumb{
 	height: max(20vh, 150pt);
@@ -224,6 +228,6 @@ footer {
 	width: 90vw;
 	}
 	
-iframe{
+iframe, video{
 	width: 90vw;
 	}
