@@ -20,6 +20,29 @@
 	<!--EN font--><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono">
 	<!--CH font--><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+Simplified+Chinese">
 <style>
+  .video-wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;              /* full viewport height for vertical centring */
+	margin: 0;
+  }
+
+  .video-container {
+	position: relative;
+	width: 56vw;                /* 56% of viewport width */
+	max-width: 100%;            /* don’t overflow small screens */
+	aspect-ratio: 16 / 9;       /* keep video ratio (modern browsers) */
+  }
+
+  .video-container iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border: 0;
+  }
 </style>
 </head>
 
@@ -81,32 +104,6 @@
 		<img onContextMenu="return false;" class="photo" src="/artportfolio/Books/asmbook/img/asmbook6.jpg">
 		<br>
 		</div>
-		
-		<style>
-		  .video-wrapper {
-		    display: flex;
-		    justify-content: center;
-		    align-items: center;
-		    height: 100vh;              /* full viewport height for vertical centring */
-		    margin: 0;
-		  }
-		
-		  .video-container {
-		    position: relative;
-		    width: 56vw;                /* 56% of viewport width */
-		    max-width: 100%;            /* don’t overflow small screens */
-		    aspect-ratio: 9 / 16;       /* keep video ratio (modern browsers) */
-		  }
-		
-		  .video-container iframe {
-		    position: absolute;
-		    top: 0;
-		    left: 0;
-		    width: 100%;
-		    height: 100%;
-		    border: 0;
-		  }
-		</style>
 		
 		<div class="video-wrapper">
 		  <div class="video-container">
