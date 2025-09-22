@@ -20,6 +20,27 @@
 	<!--EN font--><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono">
 	<!--CH font--><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+Simplified+Chinese">
 <style>
+  .video-wrapper {
+	display: block;           /* no full-height section */
+  	margin: 0;                /* avoid accidental gaps */
+  }
+
+  .video-container {
+	position: relative;
+	width: 56vw;                /* 56% of viewport width */
+	max-width: 100%;            /* don’t overflow small screens */
+    margin: 0 auto;           /* horizontal centring */
+	aspect-ratio: 16 / 9;       /* keep video ratio (modern browsers) */
+  }
+
+  .video-container iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border: 0;
+  }
 </style>
 </head>
 
@@ -112,17 +133,15 @@
 		<br>
 		</div>
 		
-		<div style="display:block; margin:0 auto; width:56%;">
-		  <iframe
-		    width="100%"
-		    height="400px"
-			src="https://www.youtube.com/embed/Ld___C0o89I?autoplay=1&mute=1&loop=1&playlist=Ld___C0o89I"
-		    frameborder="0"
-		    allow="autoplay; encrypted-media"
-		    allowfullscreen>
-		  </iframe>
-		</div><br>
-    </video>
+		<div class="video-wrapper">
+		  <div class="video-container">
+		    <iframe
+		      src="https://www.youtube.com/embed/Ld___C0o89I?autoplay=1&mute=1&loop=1&playlist=Ld___C0o89I&controls=0&modestbranding=1&showinfo=0"
+		      allow="autoplay; encrypted-media"
+		      allowfullscreen>
+		    </iframe>
+		  </div>
+		</div>
 	</div>
 
 <hr><!--divider-->
