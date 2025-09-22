@@ -90,7 +90,11 @@ hr::before { /*spacer*/
 	max-height: 80vh;
 	object-fit: contain;
 	}
-	
+
+.video-container {
+width: 90vw;  
+	}
+	  
 	/*broken images*/
 img:not([src]), img::before {
 	background-color: #f0f0f0; /* Light grey background */
