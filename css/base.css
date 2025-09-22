@@ -90,10 +90,6 @@ hr::before { /*spacer*/
 	max-height: 80vh;
 	object-fit: contain;
 	}
-
-.video-container {
-width: 90vw;  
-	}
 	  
 	/*broken images*/
 img:not([src]), img::before {
@@ -226,6 +222,10 @@ footer {
 .worklist{
 	padding: 0.3vw;
 	width: 90vw;
+	}
+
+.video-container {
+width: 90vw;  
 	}
 	
 .bold, h1{
