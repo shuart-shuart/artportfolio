@@ -45,11 +45,12 @@ body{
 
 .fine{
 	font-size: max(1.1vh, 8pt);
-	color: rgba(0, 0, 0, 0.4); /*xiao grey*/
+	color: rgba(0, 0, 0, 0.55); /*xiao grey*/
 	}
 	
 .paratext{
 	font-size: max(1.2vh, 10pt);
+	width: 50vw;
 	}
 	
 .label{
@@ -228,7 +229,7 @@ footer {
 	height: 2vh;
 	}
 	
-.gallery img{
+.gallery img, .paratext{
 	padding: 0;
 	width: 90vw;
 	}
