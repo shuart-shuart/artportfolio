@@ -21,20 +21,17 @@
 	<!--CH font--><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+Simplified+Chinese">
 <style>
   .video-wrapper {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	height: 100vh;              /* full viewport height for vertical centring */
-	margin: 0;
+	display: block;           /* no full-height section */
+  	margin: 0;                /* avoid accidental gaps */
   }
 
   .video-container {
 	position: relative;
 	width: 25vw;                /* 25% of viewport width */
 	max-width: 100%;            /* don’t overflow small screens */
-	aspect-ratio: 9 / 16;       /* keep video ratio (modern browsers) */
+    margin: 0 auto;           /* horizontal centring */
+	aspect-ratio: 1 / 1;       /* keep video ratio (modern browsers) */
   }
-
   .video-container iframe {
 	position: absolute;
 	top: 0;
