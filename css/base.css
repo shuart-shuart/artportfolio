@@ -11,6 +11,7 @@ body{
 	color: rgba(0, 0, 0, 0.6); /*grey*/
 	font-family: 'IBM Plex Mono', Monospace; 
 	font-weight: 100;
+	color: rgba(0, 0, 0, 0.6); /*dark grey*/
 	font-size: max(2vh, 14pt);
 	cursor: crosshair;
 	height: 99vh;
