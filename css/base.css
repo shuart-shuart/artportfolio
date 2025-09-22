@@ -40,7 +40,7 @@ body{
 	
 .italics{
 	font-style: italic;
-	color: rgba(0, 0, 0, 0.6); /*xiao grey*/
+	color: rgba(0, 0, 0, 0.55); /*xiao grey*/
 	}
 
 .fine{
@@ -50,6 +50,8 @@ body{
 	
 .paratext{
 	font-size: max(1.2vh, 10pt);
+	display: block;
+	margin: auto;
 	width: 50vw;
 	}
 	
