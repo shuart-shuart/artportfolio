@@ -73,7 +73,7 @@ hr::before { /*spacer*/
 	content: "///////////////";
 	display: block;
 	margin: auto;
-	font-size: max(1.2vh, 8pt);
+	font-size: max(0.9vh, 8pt);
 	color: rgba(0, 0, 0, 0.4); /*xiao grey*/
 }
 
