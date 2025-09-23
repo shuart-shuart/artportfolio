@@ -144,8 +144,9 @@ a:hover {
 .navbar{
 	position: fixed;
 	width: 100vw;
-	height: 5vh;
-	padding: 1.5vh;
+	height: evh;
+	padding-top: 1.5vh;
+	padding-bottom: 0.5vh;
 	margin: 0;
 	text-align: center;
 	list-style-type: none;
