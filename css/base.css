@@ -176,12 +176,10 @@ footer {
 	position: fixed;
 	width: 100vw;
 	height: 3vh;
-	padding: 0.5vh;
+	padding: 1vh;
 	bottom: 0;
 	right: 0;
-	min-height: 15pt;
 	text-align: center;
-	font-size: 10pt;
 	}
 	
 /*scrollbar*/
