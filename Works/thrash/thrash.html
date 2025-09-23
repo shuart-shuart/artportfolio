@@ -15,8 +15,8 @@
 	<meta property="og:url" content="https://hongshuying.art" />
 	
 <!--links for style files (no more style block)-->
-	<!--favicon--><link rel="icon" href="/artportfolio/icon.png" type="image/x-icon">
-	<!--theme--><link rel="stylesheet" type="text/css" href="/artportfolio/css/base.css"> 
+	<!--favicon--><link rel="icon" href="/icon.png" type="image/x-icon">
+	<!--theme--><link rel="stylesheet" type="text/css" href="/css/base.css"> 
 	<!--EN font--><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono">
 	<!--CH font--><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+Simplified+Chinese">
 <style>
@@ -25,14 +25,14 @@
 
 <body>
 <!--navbar-->
-<nav role="navigation">
-	<ul class="navbar">
-		<li class="navspot" id="nav1"><a href="/artportfolio/Works.html">works</a></li>
-		<li class="navspot" id="nav1"><a href="/artportfolio/Books.html">books+</a></li>
-		<li class="navspot" id="nav2"><a href="/artportfolio/Projects.html">projects</a></li>
-		<li class="navspot" id="nav3"><a  href="/artportfolio/Index.html">info</a></li><!--to change to INDEX-->
-	</ul>
-</nav>
+<div id="navbar"></div>
+	<script>
+		fetch("/navbar.html")
+			.then(response => response.text())
+			.then(data => {
+				document.getElementById("navbar").innerHTML = data;
+			});
+	</script>
 
 <!--Artwork-->
 <div class="contentbody">
@@ -49,50 +49,48 @@
 
 <!--artwork images-->
 	<div class="gallery">	
-
-<div><br><br><br><br><br></div> <!--spacer-->
 		<div>
-		<img onContextMenu="return false;" class="photo" src="/artportfolio/Works/thrash/img/thrash1.jpg">
+		<img onContextMenu="return false;" class="photo" src="/Works/thrash/img/thrash1.jpg">
 		<br>
 		</div>
 		
 		<div>
-		<img onContextMenu="return false;" class="photo" src="/artportfolio/Works/thrash/img/thrash2.jpg">
+		<img onContextMenu="return false;" class="photo" src="/Works/thrash/img/thrash2.jpg">
 		<br>
 		</div> 
 
 		<div>
-		<img onContextMenu="return false;" class="photo" src="/artportfolio/Works/thrash/img/thrash3.jpg">
+		<img onContextMenu="return false;" class="photo" src="/Works/thrash/img/thrash3.jpg">
 		<br>
 		</div>
 		
 		<div>
-		<img onContextMenu="return false;" class="photo" src="/artportfolio/Works/thrash/img/thrash4.jpg">
+		<img onContextMenu="return false;" class="photo" src="/Works/thrash/img/thrash4.jpg">
 		<br>
 		</div>
 		
 		<div>
-		<img onContextMenu="return false;" class="photo" src="/artportfolio/Works/thrash/img/thrash5.jpg">
+		<img onContextMenu="return false;" class="photo" src="/Works/thrash/img/thrash5.jpg">
 		<br>
 		</div>
 		
 		<div>
-		<img onContextMenu="return false;" class="photo" src="/artportfolio/Works/thrash/img/thrash6.jpg">
+		<img onContextMenu="return false;" class="photo" src="/Works/thrash/img/thrash6.jpg">
 		<br>
 		</div> 
 
 		<div>
-		<img onContextMenu="return false;" class="photo" src="/artportfolio/Works/thrash/img/thrash7.jpg">
+		<img onContextMenu="return false;" class="photo" src="/Works/thrash/img/thrash7.jpg">
 		<br>
 		</div>
 		
 		<div>
-		<img onContextMenu="return false;" class="photo" src="/artportfolio/Works/thrash/img/thrash8.jpg">
+		<img onContextMenu="return false;" class="photo" src="/Works/thrash/img/thrash8.jpg">
 		<br>
 		</div>
 				
 		<div>
-		<img onContextMenu="return false;" class="photo" src="/artportfolio/Works/thrash/img/thrash9.jpg">
+		<img onContextMenu="return false;" class="photo" src="/Works/thrash/img/thrash9.jpg">
 		<br>
 		</div> 
 	</div>
@@ -117,9 +115,14 @@
 </div>			
 	
 <!--footer-->
-	<footer>
-<span></span>
-	</footer>
+<div id="footer"></div>
+	<script>
+		fetch("/footer.html")
+			.then(response => response.text())
+			.then(data => {
+				document.getElementById("footer").innerHTML = data;
+			});
+	</script>
 
 </body>
 
