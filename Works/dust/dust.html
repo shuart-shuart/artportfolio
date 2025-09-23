@@ -15,8 +15,8 @@
 	<meta property="og:url" content="https://hongshuying.art" />
 	
 <!--links for style files (no more style block)-->
-	<!--favicon--><link rel="icon" href="/artportfolio/icon.png" type="image/x-icon">
-	<!--theme--><link rel="stylesheet" type="text/css" href="/artportfolio/css/base.css"> 
+	<!--favicon--><link rel="icon" href="/icon.png" type="image/x-icon">
+	<!--theme--><link rel="stylesheet" type="text/css" href="/css/base.css"> 
 	<!--EN font--><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono">
 	<!--CH font--><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+Simplified+Chinese">
 <style>
@@ -25,14 +25,14 @@
 
 <body>
 <!--navbar-->
-<nav role="navigation">
-	<ul class="navbar">
-		<li class="navspot" id="nav1"><a href="/artportfolio/Works.html">works</a></li>
-		<li class="navspot" id="nav1"><a href="/artportfolio/Books.html">books+</a></li>
-		<li class="navspot" id="nav2"><a href="/artportfolio/Projects.html">projects</a></li>
-		<li class="navspot" id="nav3"><a href="/artportfolio/Index.html">info</a></li><!--to change to INDEX-->
-	</ul>
-</nav>
+<div id="navbar"></div>
+	<script>
+		fetch("/navbar.html")
+			.then(response => response.text())
+			.then(data => {
+				document.getElementById("navbar").innerHTML = data;
+			});
+	</script>
 
 <!--Artwork-->
 <div class="contentbody">
@@ -51,81 +51,79 @@
 
 <!--artwork images-->
 	<div class="gallery">	
-
-<div><br><br><br><br><br></div> <!--spacer-->
 		<div>
-		<img onContextMenu="return false;" class="photo" src="/artportfolio/Works/dust/img/dust1.gif">
+		<img onContextMenu="return false;" class="photo" src="/Works/dust/img/dust1.gif">
 		<br>
 		</div>
 		
 		<div>
-		<img onContextMenu="return false;" class="photo" src="/artportfolio/Works/dust/img/dust2.webp">	
+		<img onContextMenu="return false;" class="photo" src="/Works/dust/img/dust2.webp">	
 		<span class="caption"><span lang="zh-Hans">泥雪迹</span> (tracings, markings)</span>
 		<br>
 		</div> 
 
 		<div>
-		<img onContextMenu="return false;" class="photo" src="/artportfolio/Works/dust/img/dust3.webp">
+		<img onContextMenu="return false;" class="photo" src="/Works/dust/img/dust3.webp">
 		<span class="caption"><span lang="zh-Hans">朋</span> (moon loops)</span>
 		<br>
 		</div>
 		
 		<div>
-		<img onContextMenu="return false;" class="photo" src="/artportfolio/Works/dust/img/dust4.webp">
+		<img onContextMenu="return false;" class="photo" src="/Works/dust/img/dust4.webp">
 		<span class="caption"><span lang="zh-Hans">雾里看它、清风吟鸣</span> (between the petals, between the feathers)</span>
 		<br>
 		</div>
 		
 		<div>
-		<img onContextMenu="return false;" class="photo" src="/artportfolio/Works/dust/img/dust5.webp">
+		<img onContextMenu="return false;" class="photo" src="/Works/dust/img/dust5.webp">
 		<span class="caption"><span lang="zh-Hans">波览</span> (gliding glimmers)</span>
 		<br>
 		</div>
 		
 		<div>
-		<img onContextMenu="return false;" class="photo" src="/artportfolio/Works/dust/img/dust6.webp">
+		<img onContextMenu="return false;" class="photo" src="/Works/dust/img/dust6.webp">
 		<br>
 		</div> 
 
 		<div>
-		<img onContextMenu="return false;" class="photo" src="/artportfolio/Works/dust/img/dust7.webp">
+		<img onContextMenu="return false;" class="photo" src="/Works/dust/img/dust7.webp">
 		<br>
 		</div>
 		
 		<div>
-		<img onContextMenu="return false;" class="photo" src="/artportfolio/Works/dust/img/dust8.webp">
+		<img onContextMenu="return false;" class="photo" src="/Works/dust/img/dust8.webp">
 		<br>
 		</div>
 				
 		<div>
-		<img onContextMenu="return false;" class="photo" src="/artportfolio/Works/dust/img/dust9.webp">
+		<img onContextMenu="return false;" class="photo" src="/Works/dust/img/dust9.webp">
 		<br>
 		</div> 
 
 		<div>
-		<img onContextMenu="return false;" class="photo" src="/artportfolio/Works/dust/img/dust10.webp">
+		<img onContextMenu="return false;" class="photo" src="/Works/dust/img/dust10.webp">
 		<br>
 		</div>
 		
 		<div>
-		<img onContextMenu="return false;" class="photo" src="/artportfolio/Works/dust/img/dust11.webp">
+		<img onContextMenu="return false;" class="photo" src="/Works/dust/img/dust11.webp">
 		<br>
 		</div>		
 
 		<div>
-		<img onContextMenu="return false;" class="photo" src="/artportfolio/Works/dust/img/dust12.webp">
+		<img onContextMenu="return false;" class="photo" src="/Works/dust/img/dust12.webp">
 		<span class="caption">Graphical Score <span class="italics"><span lang="zh-Hans">雾里看它</span> sightings</span> for instrumental improvisation</span>
 		<br>
 		</div>
 		
 		<div>
-		<img onContextMenu="return false;" class="photo" src="/artportfolio/Works/dust/img/dust12.webp">
+		<img onContextMenu="return false;" class="photo" src="/Works/dust/img/dust12.webp">
 		<span class="caption">Graphical Score <span class="italics"><span lang="zh-Hans">风中鸣 </span> sounds in wind</span> for instrumental improvisation</span>
 		<br>
 		</div>
 		
 		<div>
-		<img onContextMenu="return false;" class="photo" src="/artportfolio/Works/dust/img/dust14.webp">
+		<img onContextMenu="return false;" class="photo" src="/Works/dust/img/dust14.webp">
 		<span class="caption">Graphical Score <span class="italics"><span lang="zh-Hans">波览</span> gliding glimmers</span> for instrumental improvisation</span>
 		<br>
 		</div>
@@ -156,9 +154,14 @@
 </div>			
 	
 <!--footer-->
-	<footer>
-<span></span>
-	</footer>
+<div id="footer"></div>
+	<script>
+		fetch("/footer.html")
+			.then(response => response.text())
+			.then(data => {
+				document.getElementById("footer").innerHTML = data;
+			});
+	</script>
 
 </body>
 
