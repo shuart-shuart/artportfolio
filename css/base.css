@@ -237,8 +237,7 @@ width: 90vw;
 	}
 	
 .label{
-	background-color: blue;
-	width: 100%;
+	width: 100vw;
 	position: inherit;
 	overflow: hidden;
 	position: relative;
