@@ -15,7 +15,7 @@
 	<meta property="og:url" content="https://hongshuying.art" />
 	
 <!--links for style files (no more style block)-->
-	<!--favicon--><link rel="icon" href="/artportfolio/icon.png" type="image/x-icon">
+	<!--favicon--><link rel="icon" href="/icon.png" type="image/x-icon">
 	<!--theme--><link rel="stylesheet" type="text/css" href="css/base.css"> 
 	<!--EN font--><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono">
 	<!--CH font--><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+Simplified+Chinese">
@@ -32,14 +32,14 @@
 
 <body>
 <!--navbar-->
-<nav role="navigation">
-	<ul class="navbar">
-		<li class="navspot" id="nav1"><a href="Works.html">works</a></li>
-		<li class="navspot" id="nav1"><a href="Books.html">books+</a></li>
-		<li class="navspot" id="nav2"><a href="Projects.html">projects</a></li>
-		<li class="navspot" id="nav3"><a href="Index.html">info</a></li>
-	</ul>
-</nav>
+<div id="navbar"></div>
+	<script>
+	  fetch("/navbar.html")
+	    .then(response => response.text())
+	    .then(data => {
+	      document.getElementById("navbar").innerHTML = data;
+	    });
+	</script>
 
 <!--List of Projects-->
 <div class="contentbody">
@@ -70,7 +70,7 @@
 		</li><br>
 		
 		<li>
-			<a href="/artportfolio/Projects/bichu/bichu.html" target="_blank" rel="noopener noreferrer"><span lang="zh-Hans">彼觸</span> collecting cipher</a>
+			<a href="/Projects/bichu/bichu.html" target="_blank" rel="noopener noreferrer"><span lang="zh-Hans">彼觸</span> collecting cipher</a>
 			<span class="fine">→  solo presentation about hand-copied and annotated scores</span><br>
 			<span class="fine italics">exhibiting artist</span>
 			<span class="fine">23 Mar – 7 Apr 2024 | <span lang="zh-Hans">窯座</span> Yao Alternative Art Space, Taichung</span>
@@ -161,9 +161,14 @@
 </div>			
 	
 <!--footer-->
-	<footer>
-<span></span>
-	</footer>
+<div id="/footer"></div>
+	<script>
+		fetch("footer.html")
+			.then(response => response.text())
+			.then(data => {
+				document.getElementById("footer").innerHTML = data;
+			});
+	</script>
 
 </body>
 
