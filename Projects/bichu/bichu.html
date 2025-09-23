@@ -25,14 +25,14 @@
 
 <body>
 <!--navbar-->
-<nav role="navigation">
-	<ul class="navbar">
-		<li class="navspot" id="nav1"><a href="/artportfolio/Works.html">works</a></li>
-		<li class="navspot" id="nav1"><a href="/artportfolio/Books.html">books+</a></li>
-		<li class="navspot" id="nav2"><a href="/artportfolio/Projects.html">projects</a></li>
-		<li class="navspot" id="nav3"><a href="/artportfolio/Index.html">info</a></li><!--to change to INDEX-->
-	</ul>
-</nav>
+<div id="navbar"></div>
+	<script>
+		fetch("/navbar.html")
+			.then(response => response.text())
+			.then(data => {
+				document.getElementById("navbar").innerHTML = data;
+			});
+	</script>
 
 <!--Artwork-->
 <div class="contentbody">
@@ -49,9 +49,7 @@
 </div>
 
 <!--artwork images-->
-	<div class="gallery">	
-
-<div><br><br><br><br><br></div> <!--spacer-->
+	<div class="gallery">
 		<div>
 		<img onContextMenu="return false;" class="photo" src="/artportfolio/Projects/bichu/img/bichu1.jpg">
 		<br>
@@ -150,9 +148,14 @@
 </div>			
 	
 <!--footer-->
-	<footer>
-<span></span>
-	</footer>
+<div id="footer"></div>
+	<script>
+		fetch("footer.html")
+			.then(response => response.text())
+			.then(data => {
+				document.getElementById("footer").innerHTML = data;
+			});
+	</script>
 
 </body>
 
