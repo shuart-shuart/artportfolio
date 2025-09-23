@@ -25,14 +25,14 @@
 
 <body>
 <!--navbar-->
-<nav role="navigation">
-	<ul class="navbar">
-		<li class="navspot" id="nav1"><a href="Works.html">works</a></li>
-		<li class="navspot" id="nav1"><a href="Books.html">books+</a></li>
-		<li class="navspot" id="nav2"><a href="Projects.html">projects</a></li>
-		<li class="navspot" id="nav3"><a href="Index.html">info</a></li>
-	</ul>
-</nav>
+<div id="navbar"></div>
+	<script>
+	  fetch("navbar.html")
+	    .then(response => response.text())
+	    .then(data => {
+	      document.getElementById("navbar").innerHTML = data;
+	    });
+	</script>
 
 <!--Artist Bio-->
 <div class="contentbody">
