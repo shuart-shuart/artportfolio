@@ -27,6 +27,8 @@ body{
 /*main content + styling*/
 .contentbody{
 	position: fixed;
+	display: block;
+	margin: auto;
   	height: 94vh;
 	width: 90vw;
 	padding: 4vw;
