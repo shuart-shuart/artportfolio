@@ -4,24 +4,20 @@
   <meta charset="UTF-8" />
   <title>Opps...</title>
   <meta name="viewport" content="width=device-width,initial-scale=1" />
+	
   <!--links for style files (no more style block)-->
-	<!--favicon--><link rel="icon" href="/artportfolio/icon.png" type="image/x-icon">
-	<!--theme--><link rel="stylesheet" type="text/css" href="/artportfolio/css/base.css"> 
+	<!--favicon--><link rel="icon" href="/icon.png" type="image/x-icon">
+	<!--theme--><link rel="stylesheet" type="text/css" href="/css/base.css"> 
 	<!--EN font--><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono">
 	<!--CH font--><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+Simplified+Chinese">
-  
+	
   <style>
     /* Simple toast */
     .toast {
       position: fixed;
       left: 50%;
-      top: 20px;
+      top: 50%;
       transform: translateX(-50%);
-      padding: 20vw 20vh;
-      background: #333;
-      color: #fff;
-      border-radius: 6px;
-      box-shadow: 0 6px 20px rgba(0,0,0,.2);
       opacity: 0;
       text-align: center;
       transition: opacity .5s ease;
@@ -29,8 +25,6 @@
     }
     .toast.show { opacity: 1; }
     /* Minimal page fallback */
-    body { margin: 0; padding: 80px 16px 16px; }
-    a { color: #0b5fff; }
   </style>
 </head>
 <body>
@@ -50,7 +44,7 @@
 
   <noscript>
     <p>This link is broken — the page you’re looking for doesn’t exist.</p>
-    <p><a href="/artportfolio/Index.html">Go to the homepage</a></p>
+    <p><a href="/Index.html">Go to the homepage</a></p>
   </noscript>
 
   <script>
@@ -60,7 +54,7 @@
       requestAnimationFrame(function(){ toast.classList.add('show'); });
       // redirect after 5s
       setTimeout(function () {
-        window.location.replace('/artportfolio/Index.html');
+        window.location.replace('/Index.html');
       }, 5000);
     })();
   </script>
