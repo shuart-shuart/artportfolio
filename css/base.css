@@ -1,7 +1,8 @@
 html {
-  position: relative;
-  height: 100vh;
-  width: 100vw;
+	position: relative;
+	height: 100vh;
+	width: 100vw;
+	overflow: hidden;
 }
 
 /*body*/
@@ -14,9 +15,9 @@ body{
 	color: rgba(0, 0, 0, 0.6); /*dark grey*/
 	font-size: max(2vh, 14pt);
 	cursor: crosshair;
-	height: 99vh;
-	width: 98vw;
-	
+	height: 100vh;
+	width: 100vw;
+	overflow: hidden;
 	}
 
 :lang(zh-Hans) {
@@ -29,11 +30,13 @@ body{
 	position: fixed;
 	display: block;
 	margin: auto;
-  	height: 94vh;
-	width: 90vw;
-	padding: 4vw;
-	overflow: scroll;
-	/*background-color: red;*/
+  	height: 93.5vh;
+	width: 100vw;
+	top: 5vh;
+	left: 0;
+	overflow-y: auto; /* only this section scrolls */
+	overflow-x: hidden;
+	overscroll-behavior: contain;
 	}
 
 .bold, h1{
@@ -146,10 +149,11 @@ a:hover {
 .navbar{
 	position: fixed;
 	width: 100vw;
-	height: evh;
-	padding-top: 1.5vh;
-	padding-bottom: 0.5vh;
+	height: 3vh;
+	padding: 1vh;
 	margin: 0;
+	top: 0.25vh;
+	left:0;
 	text-align: center;
 	list-style-type: none;
 	z-index: 1;
@@ -167,6 +171,7 @@ a:hover {
 	float: center;
 	text-align: center;
 	font-size: 1vh;
+	overflow: hidden;
 	}
 
 .navspot{
@@ -183,11 +188,14 @@ a:hover {
 footer {
 	position: fixed;
 	width: 100vw;
-	height: 3vh;
-	padding: 1vh;
-	bottom: 0.35vh;
-	right: 0;
-	text-align: center;
+	height: 2vh;
+	padding-bottom: 0.5vh;
+	top: 98vh;
+	left: 0;
+	display: flex;
+	align-items: center;    /* vertical centering */
+	justify-content: center;/* horizontal centering */
+	background-color: white;
 	}
 	
 /*scrollbar*/
@@ -198,7 +206,8 @@ footer {
 	}
 
 ::-webkit-scrollbar-track { /* Track */
-	background: white;
+	background: #ff0000;
+	left: 5vh;
 	}
  
 ::-webkit-scrollbar-thumb { /* Handle */
@@ -208,7 +217,7 @@ footer {
 ::-webkit-scrollbar-thumb:hover { /* Handle on hover */
 	background: rgba(0, 0, 0, 0.8); /*dark grey*/
 	}
-	
+
 /* Use a media query to add a breakpoint at 480px: */
 @media screen and (max-width: 480px) {
 
