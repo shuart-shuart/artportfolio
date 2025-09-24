@@ -1,1 +1,274 @@
+html {
+	position: relative;
+	height: 100vh;
+	width: 100vw;
+	overflow: hidden; 
+}
+
+/*body*/
+
+body{
+	padding: 0;
+	color: rgba(0, 0, 0, 0.6); /*grey*/
+	font-family: 'IBM Plex Mono', Monospace; 
+	font-weight: 100;
+	color: rgba(0, 0, 0, 0.6); /*dark grey*/
+	font-size: max(2vh, 14pt);
+	cursor: crosshair;
+	height: 100vh;
+	width: 100vw;
+	overflow: hidden;
+	}
+
+:lang(zh-Hans) {
+	font-family: "Noto Sans", sans-serif; /* Simplified Chinese fonts */
+	font-weight: 400;
+}
+
+/*main content + styling*/
+.contentbody{
+	position: fixed;
+	display: block;
+	margin: auto;
+  	height: 93.5vh;
+	width: 95vw;
+	top: 5vh;
+	left: 2.5vw;
+	overflow-y: auto; /* only this section scrolls */
+	overflow-x: hidden;
+	overscroll-behavior: contain;
+	}
+
+.bold, h1{
+	color: rgba(0, 0, 0, 0.7); /*darker grey cos of font-weight*/
+	font-weight: 500;
+	}
+	
+.italics{
+	font-style: italic;
+	color: rgba(0, 0, 0, 0.55); /*xiao grey*/
+	}
+
+.fine{
+	font-size: max(1.1vh, 8pt);
+	color: rgba(0, 0, 0, 0.55); /*xiao grey*/
+	}
+	
+.paratext{
+	font-size: max(1.2vh, 10pt);
+	display: block;
+	margin: auto;
+	width: 50vw;
+	}
+	
+img{
+	background-color: rgba(0, 0, 0, 0.25)
+	}
+
+hr {
+	border: none;
+	text-align: center;
+	}
+
+hr::before { /*spacer*/
+	content: "///////////////";
+	display: block;
+	margin: auto;
+	font-size: max(0.9vh, 8pt);
+	color: rgba(0, 0, 0, 0.4); /*xiao grey*/
+}
+
+/*gallery/photos*/
+.gallery{
+	/*background: blue;*/
+	}
+
+.gallery img{
+	display: block;
+	margin: auto;
+	background: white;
+	width: 50vw;
+	max-height: 80vh;
+	object-fit: contain;
+	}
+	  
+	/*broken images*/
+img:not([src]), img::before {
+	background-color: #f0f0f0; /* Light grey background */
+	display: block;
+	margin-bottom: 1vh;
+	padding: 2vw;
+	width: 100%;
+	}
+
+.label{
+	position: fixed;
+	width: 20vw;
+	}	
+
+.caption {
+	display: block;
+	margin: auto;
+	font-size: max(1.2vh, 8pt);
+	text-align: center;
+	padding-top: 5px;
+	}
+
+/*worklist stuff*/
+.thumb{
+	height: max(20vh, 150pt);
+	width: max(20vh, 150pt);
+	}
+	
+.worklist{
+	list-style-type: none;
+	width: 30vw;
+	text-align: center;
+	margin: auto;
+	}
+
+/*links*/
+a{
+	color: rgba(0, 0, 0, 0.8); /*dark grey*/
+	text-decoration: underline;
+	text-decoration-color: rgba(0, 0, 0, 0.3); /*light grey*/
+	transition: all 0.8s ease;
+	}
+
+a:hover {
+	opacity: 0.3;
+	cursor: hand;
+	transition: all 0.8s ease;
+	}
+	
+/*nav bar*/
+.navbar{
+	position: fixed;
+	width: 100vw;
+	height: 3vh;
+	padding: 1vh;
+	margin: 0;
+	top: 0.25vh;
+	left:0;
+	text-align: center;
+	list-style-type: none;
+	z-index: 1;
+	background-color: white;
+	color: rgba(0, 0, 0, 0.3); /*dark grey cos of font-weight*/
+	font-size: max(2vh, 14pt);
+	font-weight: 500;
+	}
+	
+.namespot{
+	display: inline;
+	width: 64.5vw;
+	padding:0;
+	margin: 0;
+	float: center;
+	text-align: center;
+	font-size: 1vh;
+	overflow: hidden;
+	}
+
+.navspot{
+	display: inline;
+	width: 10vw;
+	padding:4vh;
+	margin: 0;
+	float: center;
+	text-decoration: underline;
+	text-decoration-style: dotted;
+	}
+			
+/*footer*/
+footer {
+	position: fixed;
+	width: 100vw;
+	height: 3vh;
+	padding-bottom: 0.5vh;
+	top: 97vh;
+	left: 0;
+	display: flex;
+	align-items: center;    /* vertical centering */
+	justify-content: center;/* horizontal centering */
+	background-color: white;
+	}
+	
+/*scrollbar*/
+::-webkit-scrollbar { /* width */
+	transform: translateX(5vw);
+	width: 0.5vw;
+	height: 2vh;
+	}
+
+::-webkit-scrollbar-track { /* Track */
+	background: rgba(0, 0, 0, 0.00) /* Light grey background */
+	left: 5vh;
+	}
+ 
+::-webkit-scrollbar-thumb { /* Handle */
+	background: rgba(0, 0, 0, 0.08);/*light grey*/
+	}
+
+::-webkit-scrollbar-thumb:hover { /* Handle on hover */
+	background: rgba(0, 0, 0, 0.8); /*dark grey*/
+	}
+
+/* Use a media query to add a breakpoint at 480px: */
+@media screen and (max-width: 480px) {
+
+.navbar{
+	height: 3vh;
+	top:0;
+	font-size: 8pt;
+	}
+	
+.navspot{
+	padding: 1vw;
+	}
+	
+#contact{
+	font-size: max(1.4vh, 10pt);	
+	}
+		
+.worklist{
+	padding: 0vw;
+	width: 90vw;
+	}
+
+footer {
+	top: 97vh;
+	padding: 0.3vh;
+	}
+	
+.bold, h1{
+	font-size: 12pt;
+	}
+	
+.label{
+	width: 90vw;
+	left: 5vw;
+	position: inherit;
+	overflow: hidden;
+	position: relative;
+	}
+	
+h1 {
+	position: fixed;
+	top: 3vh;
+	left: 5vw;
+	width: 90vw;
+	background: rgba(256, 256, 256, 1);
+	padding-top: 2vh;
+	padding-bottom: 0.7vh;
+	}
+	
+.gallery img, .paratext{
+	padding: 0;
+	width: 90vw;
+	}
+	
+iframe, video{
+	width: 90vw;
+	}
 
