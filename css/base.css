@@ -223,8 +223,8 @@ footer {
 
 .navbar{
 	height: 3vh;
+	top:0;
 	font-size: 8pt;
-	background: rgba(256, 256, 256, 1);
 	}
 	
 .navspot{
@@ -236,12 +236,13 @@ footer {
 	}
 		
 .worklist{
-	padding: 0.3vw;
+	padding: 0vw;
 	width: 90vw;
 	}
 
-.video-container {
-width: 90vw;  
+footer {
+	top: 97vh;
+	padding: 0.3vh;
 	}
 	
 .bold, h1{
@@ -249,7 +250,8 @@ width: 90vw;
 	}
 	
 .label{
-	width: 100vw;
+	width: 90vw;
+	left: 5vw;
 	position: inherit;
 	overflow: hidden;
 	position: relative;
@@ -257,12 +259,17 @@ width: 90vw;
 	
 h1 {
 	position: fixed;
-	top: 4.6vh;
-	width: 100vw;
+	top: 3vh;
+	left: 5vw;
+	width: 90vw;
 	background: rgba(256, 256, 256, 1);
 	padding-top: 2vh;
 	padding-bottom: 0.7vh;
 	}
+	
+body  {
+	background: pink;
+	}	
 	
 .gallery img, .paratext{
 	padding: 0;
