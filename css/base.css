@@ -104,7 +104,7 @@ img:not([src]), img::before {
 .label{
 	position: fixed;
 	width: 20vw;
-	left: 5vw;
+	left: 2vw;
 	}	
 
 .caption {
@@ -203,7 +203,7 @@ footer {
 	}
 
 ::-webkit-scrollbar-track { /* Track */
-	background: #ff0000;
+	background: #f0f0f0; /* Light grey background */
 	left: 5vh;
 	}
  
