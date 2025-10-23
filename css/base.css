@@ -42,6 +42,7 @@ body{
 .bold, h1{
 	color: rgba(0, 0, 0, 0.7); /*darker grey cos of font-weight*/
 	font-weight: 500;
+	z-index: 1;
 	}
 	
 .italics{
