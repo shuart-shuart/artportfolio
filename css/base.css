@@ -275,12 +275,13 @@ body{
 	
 h1 {
 	position: fixed;
-	top: 3vh;
+	top: 5vh;
 	left: 5vw;
 	width: 90vw;
 	background: rgba(256, 256, 256, 1);
 	padding-top: 2vh;
 	padding-bottom: 0.7vh;
+	z-index: 2;
 	}
 	
 .gallery img, .paratext{
