@@ -1,72 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Opps...</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+	<title>Hong Shu-ying 方舒颖 | Art</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!--for SEO-->
+	<meta  property=og:title content=“Hong Shu-ying 方舒颖 | Art” />
+	<meta property="og:description" content="Hong Shu-ying reframes and reencounters traces left by others and by time. Working primarily with books, moving images, and printed matter, she explores how knowledge and memory take shape and find continuity across times and spaces." />
+	<meta name="description" content="Hong Shu-ying 方舒颖 reframes and reencounters traces left by others and by time. Working primarily with books, moving images, and printed matter, she explores how knowledge and memory take shape and find continuity across times and spaces." />
+	<meta name="keywords" content="Hong Shu-ying, Shu-ying, Shu, Singapore artist, contemporary art Singapore, artist books, moving image, archives, found images, memory, inheritance, Chinese orchestra, internet culture" />
+    <meta name="robots" content="index, follow" />
+	<meta property="og:image" content="thumbnails/placeholder.jpg" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://hongshuying.art" />
 	
-  <!--links for style files (no more style block)-->
+<!--links for style files (no more style block)-->
 	<!--favicon--><link rel="icon" href="/icon.png" type="image/x-icon">
 	<!--theme--><link rel="stylesheet" type="text/css" href="/css/base.css"> 
 	<!--EN font--><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono">
 	<!--CH font--><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+Simplified+Chinese">
-	
-  <style>
-    /* Simple toast */
-    .toast {
-      position: fixed;
-      left: 50%;
-      top: 50%;
-      transform: translateX(-50%);
-      opacity: 0;
-      text-align: center;
-      transition: opacity .5s ease;
-      z-index: 9999;
-    }
-    .toast.show { opacity: 1; }
-    /* Minimal page fallback */
-  </style>
+<style>
+</style>
 </head>
+
 <body>
-
+<!--navbar-->
 <div id="navbar"></div>
-  <script>
-    fetch("/navbar.html")
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById("navbar").innerHTML = data;
-      });
-  </script>
-  
-  <div id="toast" class="toast" role="status" aria-live="polite">
-    This link is broken — the page you’re looking for doesn’t exist. <br><br>Redirecting in 5 secs…
-  </div>
+	<script>
+	  fetch("/navbar.html")
+	    .then(response => response.text())
+	    .then(data => {
+	      document.getElementById("navbar").innerHTML = data;
+	    });
+	</script>
 
-  <noscript>
-    <p>This link is broken — the page you’re looking for doesn’t exist.</p>
-    <p><a href="/Index.html">Go to the homepage</a></p>
-  </noscript>
+<!--Artist Bio-->
+<div class="contentbody">
 
-  <script>
-    (function () {
-      var toast = document.getElementById('toast');
-      // show toast
-      requestAnimationFrame(function(){ toast.classList.add('show'); });
-      // redirect after 5s
-      setTimeout(function () {
-        window.location.replace('/Index.html');
-      }, 5000);
-    })();
-  </script>
+<div><br><br></div> <!--spacer-->
+	<div>
+		<p>
+		Hong Shu-ying 方舒颖 reframes and reencounters traces left by others and by time. Working primarily with books, moving images, and printed matter, she explores how knowledge and memory take shape and find continuity across times and spaces.
+		</p></p>
+		Her practice attends to amateur practices and everyday gestures that leave unintentional records — rooted in her formative years in amateur Chinese orchestras and an early immersion in internet culture, where learning unfolds informally and collectively. Drawing from handwritten scores and annotations, found footage, and circulated images, she considers how acts of sharing, copying, and repetition produce forms of collective memory.
+		</p></p>
+		Hong also initiates collaborative projects that expand how art and art books are encountered. She co-founded <b>Part Time Book Club</b>, a collective that organises irregular gatherings to share and discover art books. In parallel, she runs <b>|      | on paper</b>, an alternative residency that proposes a more resource-lean model for artistic exchange — unfolding in iterations concurrent with her own residencies.
+		</p></p>
+		Hong Shu-ying received the Kwek Leng Joo Prize of Excellence in Photography and was featured in the <i>6th Women in Film and Photography Showcase</i> by Objectifs Centre for Photography and Film (Singapore). She has presented solo exhibitions at Esplanade (Singapore) during Singapore Art Week 2024, and  Yao Alternative Space (Taichung). Her work has also been shown in various platforms across Austria, Cambodia, China, Germany, India, Indonesia, Italy, Malaysia, the Netherlands, South Korea, Taiwan, and Thailand. She holds a BFA (Hons) in Media Art (Photography) from the School of Art, Design and Media, Nanyang Technological University, Singapore. 
+		</p>
+	</div>
 
+<hr><!--divider-->
+
+	<div id="contact"  style="display:flex; justify-content:center;">
+		<p>
+		<a href="mailto:shuart.shuart@gmail.com">shuart.shuart@gmail.com</a> | 
+		<a href="https://instagram.com/shu0shushu">@shu0shushu</a> | 
+		<a href="https://docs.google.com/document/d/e/2PACX-1vTc5Z3NnJ3ukfRLspfswpeYPcYek4Xa-6CMePB3Chl__eQft5pN-qyhOFg6BbHJ4TUq5WiUj28M9jG5/pub">CV</a>
+		</p>
+	</div>			
+	
+<!--footer-->
 <div id="footer"></div>
-  <script>
-    fetch("/footer.html")
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById("footer").innerHTML = data;
-      });
-  </script>
-    
+	<script>
+		fetch("/footer.html")
+			.then(response => response.text())
+			.then(data => {
+				document.getElementById("footer").innerHTML = data;
+			});
+	</script>
+
 </body>
+
 </html>
