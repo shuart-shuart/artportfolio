@@ -61,6 +61,15 @@ body{
 	margin: auto;
 	width: 50vw;
 	}
+
+.biotext{
+	font-size: max(1.2vh, 10pt);
+	display: block;
+	margin: auto;
+	line-height: 1.7;
+	width: 35vw;
+	align: right;
+	}
 	
 img{
 	background-color: rgba(0, 0, 0, 0.25)
@@ -284,7 +293,7 @@ h1 {
 	z-index: 2;
 	}
 	
-.gallery img, .paratext{
+.gallery img, .paratext, .biotext{
 	padding: 0;
 	width: 90vw;
 	}
