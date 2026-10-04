@@ -28,46 +28,64 @@
 <div id="navbar"></div>
 	<script>
 	  fetch("/navbar.html")
-	    .then(response => response.text())
-	    .then(data => {
-	      document.getElementById("navbar").innerHTML = data;
-	    });
+  .then(response => {
+    if (!response.ok) {
+      throw new Error(`Navbar failed to load: ${response.status}`);
+    }
+    return response.text();
+  })
+  .then(data => {
+    document.getElementById("navbar").innerHTML = data;
+  })
+  .catch(error => {
+    console.error(error);
+  });
 	</script>
 
 <!--Artist Bio-->
 <div class="contentbody">
 
-<div><br><br></div> <!--spacer-->
+<div><br></div> <!--spacer-->
 	<div class="biotext">
 		<p>
-		Hong Shu-ying <span lang="zh-Hans">方舒颖</span> reframes and reencounters traces left by others and by time. Working primarily with books, moving images, and printed matter, she explores how knowledge and memory take shape and find continuity across times and spaces.
-		</p></p>
-		Her practice attends to amateur practices and everyday gestures that leave unintentional records. This is rooted in her formative years in amateur Chinese orchestras and an early immersion in internet culture, where learning unfolds informally and collectively. Drawing from handwritten scores and annotations, found footage, and circulated images, she considers how acts of sharing, copying, and repetition produce forms of collective memory.
-		</p></p>
-		Hong also initiates collaborative projects that expand how art and art books are encountered. She co-founded <a href="https://www.instagram.com/parttimebookclub" target="_blank">Part Time Book Club</a>, a collective that organises irregular gatherings to share and discover art books. In parallel, she runs <a href="https://www.instagram.com/______onpaper" target="_blank">|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| on paper</a>, an alternative residency that proposes a more resource-lean model for artistic exchange — unfolding in iterations concurrent with her own residencies.
-		</p></p>
+		Hong Shu-ying <span lang="zh-Hans">方舒颖</span> hoards images and stories to make sense of how things are learned and passed on. Working across moving images, prints, and printed matter, her practice begins with images, notations and other vernacular working documents in circulation. She is interested in the drifts, contradictions and adaptations that allow shared ways of knowing and working to remain legible as they pass through different hands and contexts.
+		</p><p>
+		She grew up in amateur Chinese orchestras, where learning took place through photocopied scores, handwritten annotations and imitation. Alongside this, she spent her teenage years collecting and reposting images online. These parallel habits shaped how she looks at vernacular working documents—not simply as records, but as evidence of how information, knowledge and conventions are continually transmitted, adjusted and kept alive through use.
+		</p><p>
+		This curiosity extends beyond the studio. She co-founded <a href="https://www.instagram.com/parttimebookclub" target="_blank">Part Time Book Club</a>, an informal collective that expands public access to art books through gatherings and exchanges. In response to limited access to formal residencies and the demands of international travel, she also initiated <a href="https://www.instagram.com/______onpaper" target="_blank">|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| on paper</a>, a resource-lean residency centred on conversations and four sheets of A4 paper, grounded in the belief that meaningful artistic exchange can grow from modest resources.
+		</p><p>
 		Hong Shu-ying received the Kwek Leng Joo Prize of Excellence in Photography and was featured in the <span class="italics">6th Women in Film and Photography Showcase</span> by Objectifs Centre for Photography and Film (Singapore). She has presented solo exhibitions at Esplanade (Singapore, 2024) and Yao Alternative Space <span lang="zh-Hans">窯座</span> (Taichung, 2024), with an upcoming presentation at RM Gallery (Auckland, 2026). Her work has also been shown at Three Shadows Xiamen Photography Art Centre and Pingyao International Photography Festival (China); Jakarta International Photography Festival (Indonesia); PRINTROOM (Netherlands); CICA Museum (South Korea); Pon Ding <span lang="zh-Hans">朋丁</span> (Taiwan); and DECK, I_S_L_A_N_D_S Peninsula, Art Outreach, and ADM Gallery (Singapore). She holds a BFA (Hons) in Media Art (Photography) from the School of Art, Design and Media, Nanyang Technological University, Singapore.
+		</p><p>
+		She was recently a resident at the Singapore Art Museum.
 		</p>
 	</div>
 
 <hr><!--divider-->
 
-	<div class="paratext" id="contact"  style="display:flex; justify-content:center;">
+	<div class="paratext biotext" id="contact"  style="display:flex; justify-content:center; align: center;">
 		<p>
 		<a href="mailto:shuart.shuart@gmail.com">shuart.shuart@gmail.com</a> | 
 		<a href="https://instagram.com/shu0shushu" target="_blank">@shu0shushu</a> | 
 		<a href="https://docs.google.com/document/d/e/2PACX-1vTc5Z3NnJ3ukfRLspfswpeYPcYek4Xa-6CMePB3Chl__eQft5pN-qyhOFg6BbHJ4TUq5WiUj28M9jG5/pub" target="_blank">CV</a>
 		</p>
-	</div>			
+	</div><br>			
 	
 <!--footer-->
 <div id="footer"></div>
 	<script>
 		fetch("/footer.html")
-			.then(response => response.text())
-			.then(data => {
-				document.getElementById("footer").innerHTML = data;
-			});
+  .then(response => {
+    if (!response.ok) {
+      throw new Error(`Footer failed to load: ${response.status}`);
+    }
+    return response.text();
+  })
+  .then(data => {
+    document.getElementById("footer").innerHTML = data;
+  })
+  .catch(error => {
+    console.error(error);
+  });
 	</script>
 
 </body>
